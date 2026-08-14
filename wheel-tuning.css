@@ -1,1 +1,17 @@
-.nine-wheel{transition-duration:5.2s}.number-orbit b{font-size:clamp(17px,3.2vw,27px)}.number-orbit em{font-size:9px}.oracle-core small{font-size:9px}.oracle-core strong{font-size:clamp(15px,2.4vw,21px)}.oracle-core span{font-size:9px}@media(max-width:520px){.number-orbit b{font-size:16px}.oracle-core strong{font-size:15px}}
+.nine-wheel{transition-duration:5.2s}
+.number-orbit b{font-size:clamp(14px,2.6vw,22px)}
+.number-orbit em{font-size:8px}
+.oracle-core small{font-size:8px}
+.oracle-core strong{font-size:clamp(13px,2vw,18px)}
+.oracle-core span{font-size:8px}
+#reading>div:first-child h2{font-size:clamp(25px,3.4vw,30px)}
+#reading>div:first-child p:last-child{font-size:14px;line-height:1.65}
+#birth-form label{font-size:13px}
+#birth-form input,#birth-form select,#birth-form button{font-size:13px}
+#birth-form small{font-size:11px}
+@media(max-width:520px){
+  .number-orbit b{font-size:13px}
+  .oracle-core strong{font-size:13px}
+  #reading>div:first-child h2{font-size:24px}
+  #reading>div:first-child p:last-child{font-size:13px}
+}
