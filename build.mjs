@@ -5,7 +5,7 @@ await mkdir('dist/server', { recursive: true });
 await mkdir('dist/client/assets', { recursive: true });
 await mkdir('dist/.openai', { recursive: true });
 
-for (const file of ['index.html', 'styles.css', 'shop.css', 'talent-report.css', 'phase-two.css', 'mystic-wheel.css', 'wheel-tuning.css', 'naming.css', 'app.js', 'talent-engine.js', 'naming.js']) {
+for (const file of ['index.html', 'styles.css', 'shop.css', 'talent-report.css', 'phase-two.css', 'mystic-wheel.css', 'wheel-tuning.css', 'naming.css', 'app.js', 'talent-engine.js', 'naming.js', 'layout.js']) {
   await cp(file, `dist/client/${file}`);
 }
 await cp('assets/cultural-products.png', 'dist/client/assets/cultural-products.png');
