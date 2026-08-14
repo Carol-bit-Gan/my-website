@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="shop.css">
   <link rel="stylesheet" href="talent-report.css">
   <link rel="stylesheet" href="phase-two.css">
+  <link rel="stylesheet" href="mystic-wheel.css">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -93,9 +94,23 @@
       </div>
       <form id="birth-form">
         <label for="birth" data-i18n="birthLabel">出生日期</label>
-        <div class="form-row"><input id="birth" type="date" value="1990-06-15" required><select id="focus"><option value="talent">天赋与自我</option><option value="career">事业与转型</option><option value="relationship">关系与合作</option><option value="balance">身心平衡</option></select><button class="button primary" type="submit" data-i18n="generate">生成图谱 →</button></div>
+        <div class="form-row"><input id="birth" type="date" value="1990-06-15" required><select id="focus"><option value="talent">天赋与自我</option><option value="career">事业与转型</option><option value="relationship">关系与合作</option><option value="balance">身心平衡</option></select><button class="button primary" type="submit" data-i18n="generate">启动九数轮 →</button></div>
         <small data-i18n="privacy">日期仅在本页计算，不会上传或保存。</small>
       </form>
+      <div class="oracle-stage" id="oracle-stage">
+        <div class="oracle-stars" aria-hidden="true"></div>
+        <div class="oracle-pointer" aria-hidden="true"><i></i></div>
+        <div class="wheel-halo" aria-hidden="true"></div>
+        <div class="nine-wheel" id="nine-wheel" aria-hidden="true">
+          <div class="etched-ring ring-a"></div><div class="etched-ring ring-b"></div><div class="etched-ring ring-c"></div>
+          <div class="number-orbit">
+            <span style="--i:0"><b>壹</b><em>1</em></span><span style="--i:1"><b>贰</b><em>2</em></span><span style="--i:2"><b>叁</b><em>3</em></span><span style="--i:3"><b>肆</b><em>4</em></span><span style="--i:4"><b>伍</b><em>5</em></span><span style="--i:5"><b>陆</b><em>6</em></span><span style="--i:6"><b>柒</b><em>7</em></span><span style="--i:7"><b>捌</b><em>8</em></span><span style="--i:8"><b>玖</b><em>9</em></span>
+          </div>
+          <div class="trigram-ring"><span>☰</span><span>☱</span><span>☲</span><span>☳</span><span>☴</span><span>☵</span><span>☶</span><span>☷</span></div>
+        </div>
+        <button class="oracle-core" id="wheel-trigger" type="submit" form="birth-form"><small>九数玄轮</small><strong id="wheel-action">点击转动</strong><span id="wheel-status">等待生日坐标</span></button>
+        <div class="orbit-spark spark-one"></div><div class="orbit-spark spark-two"></div><div class="orbit-spark spark-three"></div>
+      </div>
       <div id="result" class="talent-report" hidden>
         <div class="report-top">
           <div><small id="report-kicker">你的核心文化原型</small><h3 id="result-title">构建者</h3><p id="result-copy"></p><div class="report-chips"><span id="result-element"></span><span id="result-secondary"></span><span id="result-number"></span></div></div>
