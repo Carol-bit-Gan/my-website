@@ -7,6 +7,7 @@
   <meta name="description" content="面向全球个人与企业家的跨文化天赋分析、外国人中文命名及东方战略咨询，融合易经、五行、孙子兵法、玛雅历法与多文化人格系统。">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="talent-report.css">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -94,7 +95,20 @@
         <div class="form-row"><input id="birth" type="date" value="1990-06-15" required><button class="button primary" type="submit" data-i18n="generate">生成图谱 →</button></div>
         <small data-i18n="privacy">日期仅在本页计算，不会上传或保存。</small>
       </form>
-      <div id="result" class="result" hidden><div><small data-i18n="archetype">你的文化性格原型</small><h3 id="result-title">构建者</h3><p id="result-copy"></p></div><dl><div><dt data-i18n="element">东方元素</dt><dd id="result-element"></dd></div><div><dt data-i18n="rhythm">时间节奏</dt><dd id="result-rhythm"></dd></div><div><dt data-i18n="strength">核心优势</dt><dd id="result-strength"></dd></div></dl></div>
+      <div id="result" class="talent-report" hidden>
+        <div class="report-top">
+          <div><small id="report-kicker">你的核心文化原型</small><h3 id="result-title">构建者</h3><p id="result-copy"></p><div class="report-chips"><span id="result-element"></span><span id="result-secondary"></span><span id="result-number"></span></div></div>
+          <div class="radar-wrap"><svg id="talent-radar" viewBox="0 0 320 300" role="img" aria-label="Talent radar chart"><g id="radar-grid"></g><polygon id="radar-shape" points="160,50 270,130 228,255 92,255 50,130"></polygon><g id="radar-labels"></g></svg></div>
+        </div>
+        <div class="score-bars" id="score-bars"></div>
+        <div class="report-cards">
+          <article><small id="strength-label">核心优势</small><h4 id="result-strength"></h4><p id="strength-copy"></p></article>
+          <article><small id="balance-label">平衡提醒</small><h4 id="balance-title"></h4><p id="balance-copy"></p></article>
+          <article><small id="strategy-label">东方战略提示</small><h4 id="strategy-title"></h4><p id="strategy-copy"></p></article>
+        </div>
+        <div class="product-match"><div><small id="match-label">与你的故事相匹配</small><h4 id="match-title"></h4><p id="match-copy"></p></div><a id="match-link" href="#shop">查看文化产品 →</a></div>
+        <p class="algorithm-note" id="algorithm-note">算法版本：原创文化坐标 v0.2。结果用于文化探索和自我反思，不是科学心理测评、命运预测或传统命理结论。</p>
+      </div>
     </section>
 
     <section id="faq" class="section shell faq">
@@ -108,5 +122,6 @@
   <footer class="shell"><div class="brand"><span class="brand-mark">✦</span><span data-i18n="brand">天赋图鉴</span></div><p data-i18n="footer">文化是理解自己的另一种语言。</p><small>© 2026 · Cultural exploration, not prediction.</small></footer>
   <aside id="cart-panel" class="cart-panel" aria-hidden="true"><div class="cart-title"><h2 data-i18n="yourCart">你的购物袋</h2><button id="cart-close">×</button></div><div id="cart-items"></div><p id="cart-empty" data-i18n="cartEmpty">购物袋还是空的。</p><div class="cart-total"><span data-i18n="subtotal">商品小计</span><strong id="cart-total">¥0</strong></div><button class="button primary checkout" data-i18n="inquiry">提交购买意向</button><small data-i18n="prototypeNote">当前为商品原型，不会产生真实订单或付款。</small></aside><div id="cart-shade" class="cart-shade"></div>
   <script src="app.js"></script>
+  <script src="talent-engine.js"></script>
 </body>
 </html>
