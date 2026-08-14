@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="phase-two.css">
   <link rel="stylesheet" href="mystic-wheel.css">
   <link rel="stylesheet" href="wheel-tuning.css">
+  <link rel="stylesheet" href="naming.css">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -30,6 +31,7 @@
     <nav>
       <a href="#systems" data-i18n="navSystems">文化系统</a>
       <a href="#services" data-i18n="navServices">服务</a>
+      <a href="#naming" id="nav-naming">中文取名</a>
       <a href="#shop" data-i18n="navShop">文化商店</a>
       <a href="#faq" data-i18n="navFaq">常见问题</a>
     </nav>
@@ -134,6 +136,22 @@
       </div>
     </section>
 
+    <section id="naming" class="section shell naming-studio">
+      <div class="naming-intro"><p class="eyebrow" id="naming-eyebrow">外国人中文取名</p><h2 id="naming-heading">让名字既能被叫出来，<br>也能讲述你的中国故事。</h2><p id="naming-lead">结合原名发音、生日九数、中国农历年干五行与个人愿景，生成三个中文名字初选，并用《孙子兵法》解释名字对应的行动战略。</p></div>
+      <form id="naming-form" class="naming-form">
+        <label><span id="original-name-label">原文姓名</span><input id="original-name" type="text" value="Explorer Leo" autocomplete="name" required></label>
+        <label><span id="naming-birth-label">出生日期</span><input id="naming-birth" type="date" value="1990-06-15" required></label>
+        <label><span id="intent-label">希望名字表达</span><select id="naming-intent"><option value="leadership">领导与开创</option><option value="harmony">合作与和谐</option><option value="wisdom">智慧与洞察</option><option value="courage">勇气与行动</option><option value="abundance">丰盛与贡献</option></select></label>
+        <button class="button primary" id="naming-submit" type="submit">生成中文名初选 →</button>
+        <small id="naming-privacy">资料仅在本页计算，不会上传或保存。</small>
+      </form>
+      <div id="naming-result" class="naming-result" hidden>
+        <div class="naming-context"><div><small id="naming-context-label">命名文化坐标</small><h3 id="naming-context-title"></h3><p id="naming-context-copy"></p></div><div class="context-seal" id="context-seal">名</div></div>
+        <div class="name-cards" id="name-cards"></div>
+        <div class="naming-boundary"><strong id="review-title">正式使用前人工复核</strong><p id="review-copy">候选名需要进一步检查普通话和目标方言谐音、性别与年龄语感、常见重名、职业场景及证件登记需要。五行归类在不同流派中可能不同。</p></div>
+      </div>
+    </section>
+
     <section id="faq" class="section shell faq">
       <p class="eyebrow">FAQ</p><h2 data-i18n="faqTitle">常见问题</h2>
       <details open><summary data-i18n="q1">外国人如何获得合适的中文名字？</summary><p data-i18n="a1">我们综合原名发音、中文语义、个人特质、职业形象和使用场景，排除不良谐音，并解释每个候选名字的文化含义。</p></details>
@@ -146,5 +164,6 @@
   <aside id="cart-panel" class="cart-panel" aria-hidden="true"><div class="cart-title"><h2 data-i18n="yourCart">你的购物袋</h2><button id="cart-close">×</button></div><div id="cart-items"></div><p id="cart-empty" data-i18n="cartEmpty">购物袋还是空的。</p><div class="cart-total"><span data-i18n="subtotal">商品小计</span><strong id="cart-total">¥0</strong></div><button class="button primary checkout" data-i18n="inquiry">提交购买意向</button><small data-i18n="prototypeNote">当前为商品原型，不会产生真实订单或付款。</small></aside><div id="cart-shade" class="cart-shade"></div>
   <script src="app.js"></script>
   <script src="talent-engine.js"></script>
+  <script src="naming.js"></script>
 </body>
 </html>
