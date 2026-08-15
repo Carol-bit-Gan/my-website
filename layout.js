@@ -6,6 +6,10 @@ if(mainContent&&nineWheelExperience){
 }
 
 function refineDisplayText(){
+  document.querySelectorAll('#original-lens-copy,#step-calc-copy').forEach(element=>{
+    const refined=element.textContent.replace(/^[0-9+]+=\d+(?:→\d+)*\s*(?:·|→)\s*/,'');
+    if(refined!==element.textContent)element.textContent=refined;
+  });
   document.querySelectorAll('h1,h2').forEach(element=>{
     const refined=element.innerHTML.replace(/[，。,.]/g,'');
     if(refined!==element.innerHTML)element.innerHTML=refined;
