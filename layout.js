@@ -2,6 +2,9 @@ const mainContent=document.querySelector('#top');
 const nineWheelExperience=document.querySelector('#reading');
 
 if(typeof copy!=='undefined'&&copy.zh){
+  copy.zh.brand='天赋图鉴 跨文化天赋与东方战略';
+  copy.en.brand='Talent Atlas · Cross-Cultural Talent & Eastern Strategy';
+  copy.es.brand='Atlas del Talento · Talento Intercultural y Estrategia Oriental';
   copy.zh.eyebrow='东方智慧 × 多文化';
   copy.zh.sys4='多文化模型';
   copy.en.eyebrow='Eastern wisdom × multicultural perspectives';
@@ -20,6 +23,7 @@ function setText(selector,value){
 }
 
 function refineDisplayText(){
+  document.title={zh:'天赋图鉴 跨文化天赋与东方战略',en:'Talent Atlas · Cross-Cultural Talent & Eastern Strategy',es:'Atlas del Talento · Talento Intercultural y Estrategia Oriental'}[lang];
   const fiveElements={
     zh:{wood:'木',fire:'火',earth:'土',gold:'金',water:'水'},
     en:{wood:'Wood',fire:'Fire',earth:'Earth',gold:'Gold',water:'Water'},
