@@ -20,6 +20,15 @@ function setText(selector,value){
 }
 
 function refineDisplayText(){
+  const fiveElements={
+    zh:{wood:'木',fire:'火',earth:'土',metal:'金',water:'水'},
+    en:{wood:'Wood',fire:'Fire',earth:'Earth',metal:'Metal',water:'Water'},
+    es:{wood:'Madera',fire:'Fuego',earth:'Tierra',metal:'Metal',water:'Agua'}
+  }[lang];
+  document.querySelectorAll('.orbit [data-element]').forEach(element=>{
+    const translated=fiveElements[element.dataset.element];
+    if(element.textContent!==translated)element.textContent=translated;
+  });
   const terminology={
     zh:{wheel:'九数玄轮',generate:'启动九数轮 →'},
     en:{wheel:'Jiushu Mystic Wheel',generate:'Jiushu →'},
