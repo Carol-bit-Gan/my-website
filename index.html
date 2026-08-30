@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="wheel-tuning.css">
   <link rel="stylesheet" href="naming.css">
   <link rel="stylesheet" href="typography-tuning.css">
+  <link rel="stylesheet" href="wuxing.css">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -52,9 +53,16 @@
           <a class="button ghost" href="#reading" data-i18n="tryReading">体验天赋图谱</a>
         </div>
       </div>
-      <div class="orbit" aria-hidden="true">
+      <div class="orbit wuxing-compass" aria-hidden="true">
+        <div class="wuxing-stars"></div>
         <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
-        <div class="core">易<br><small>CHANGE</small></div>
+        <div class="bagua-wheel"><span>☰</span><span>☱</span><span>☲</span><span>☳</span><span>☴</span><span>☵</span><span>☶</span><span>☷</span></div>
+        <svg class="wuxing-paths" viewBox="0 0 100 100" aria-hidden="true">
+          <defs><marker id="wuxing-arrow" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#d9aa55"></path></marker></defs>
+          <g class="sheng-cycle" marker-end="url(#wuxing-arrow)"><path d="M9 38 Q25 15 47 10"></path><path d="M54 10 Q77 17 91 38"></path><path d="M93 44 Q92 70 79 89"></path><path d="M72 93 Q50 99 31 93"></path><path d="M24 89 Q8 70 7 44"></path></g>
+          <g class="ke-cycle"><path d="M8 40 L91 40 L29 91 L50 10 L77 91 Z"></path></g>
+        </svg>
+        <div class="core"><i>☯</i><b>易</b><small id="wuxing-subtitle">五行流转</small></div>
         <span class="node n1" data-element="fire">火</span><span class="node n2" data-element="earth">土</span><span class="node n3" data-element="gold">金</span><span class="node n4" data-element="water">水</span><span class="node n5" data-element="wood">木</span>
       </div>
     </section>

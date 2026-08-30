@@ -29,6 +29,7 @@ function refineDisplayText(){
     en:{wood:'Wood',fire:'Fire',earth:'Earth',gold:'Gold',water:'Water'},
     es:{wood:'Madera',fire:'Fuego',earth:'Tierra',gold:'Oro',water:'Agua'}
   }[lang];
+  setText('#wuxing-subtitle',{zh:'五行流转',en:'Five Phases',es:'Cinco Fases'}[lang]);
   document.querySelectorAll('.orbit [data-element]').forEach(element=>{
     const translated=fiveElements[element.dataset.element];
     if(element.textContent!==translated)element.textContent=translated;
