@@ -21,9 +21,9 @@ function setText(selector,value){
 
 function refineDisplayText(){
   const fiveElements={
-    zh:{wood:'木',fire:'火',earth:'土',metal:'金',water:'水'},
-    en:{wood:'Wood',fire:'Fire',earth:'Earth',metal:'Metal',water:'Water'},
-    es:{wood:'Madera',fire:'Fuego',earth:'Tierra',metal:'Metal',water:'Agua'}
+    zh:{wood:'木',fire:'火',earth:'土',gold:'金',water:'水'},
+    en:{wood:'Wood',fire:'Fire',earth:'Earth',gold:'Gold',water:'Water'},
+    es:{wood:'Madera',fire:'Fuego',earth:'Tierra',gold:'Oro',water:'Agua'}
   }[lang];
   document.querySelectorAll('.orbit [data-element]').forEach(element=>{
     const translated=fiveElements[element.dataset.element];
@@ -48,6 +48,11 @@ function refineDisplayText(){
     }else if(lang==='es'){
       refined=refined.replace(/nueve números/gi,'Jiushu').replace('La rueda está girando…','La rueda mística Jiushu está girando…');
     }
+    if(refined!==element.textContent)element.textContent=refined;
+  });
+  document.querySelectorAll('#top *').forEach(element=>{
+    if(element.children.length)return;
+    const refined=lang==='en'?element.textContent.replace(/\bMetal\b/g,'Gold'):lang==='es'?element.textContent.replace(/\bMetal\b/g,'Oro'):element.textContent;
     if(refined!==element.textContent)element.textContent=refined;
   });
   document.querySelectorAll('#original-lens-copy,#step-calc-copy').forEach(element=>{
