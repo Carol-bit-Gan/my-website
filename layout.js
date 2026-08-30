@@ -9,11 +9,11 @@ if(typeof copy!=='undefined'&&copy.zh){
   copy.zh.sys4='多文化模型';
   copy.en.eyebrow='Eastern wisdom × multicultural perspectives';
   copy.en.sys4='Multicultural models';
-  copy.en.heroTitle='Discover your strengths.<br>Choose a meaningful Chinese name.';
+  copy.en.heroTitle='Discover your strengths.';
   copy.en.heroLead='Explore identity, talent and strategy through the I Ching, Wu Xing, The Art of War, Maya traditions and other cultural perspectives.';
   copy.es.eyebrow='Sabiduría oriental × perspectivas multiculturales';
   copy.es.sys4='Modelos multiculturales';
-  copy.es.heroTitle='Descubre tus fortalezas.<br>Elige un nombre chino con significado.';
+  copy.es.heroTitle='Descubre tus fortalezas.';
   copy.es.heroLead='Explora la identidad, el talento y la estrategia a través del I Ching, Wu Xing, El arte de la guerra, las tradiciones mayas y otras perspectivas culturales.';
 }
 
