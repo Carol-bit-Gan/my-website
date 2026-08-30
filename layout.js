@@ -3,18 +3,18 @@ const nineWheelExperience=document.querySelector('#reading');
 
 if(typeof copy!=='undefined'&&copy.zh){
   copy.zh.brand='天赋图鉴 跨文化天赋与东方战略';
-  copy.zh.heroTitle='发现天赋，聚焦优势，<br>集中力量形成卓越';
+  copy.zh.heroTitle='发现优势，并持续放大';
   copy.en.brand='Talent Atlas · Cross-Cultural Talent & Eastern Strategy';
   copy.es.brand='Atlas del Talento · Talento Intercultural y Estrategia Oriental';
   copy.zh.eyebrow='东方智慧 × 多文化';
   copy.zh.sys4='多文化模型';
   copy.en.eyebrow='Eastern wisdom × multicultural perspectives';
   copy.en.sys4='Multicultural models';
-  copy.en.heroTitle='Discover Your Talents.<br>Focus on Your Strengths.<br>Strive for Excellence.';
+  copy.en.heroTitle='Discover Your Strengths.<br>Build on Them.';
   copy.en.heroLead='Explore identity, talent and strategy through the I Ching, Wu Xing, The Art of War, Maya traditions and other cultural perspectives.';
   copy.es.eyebrow='Sabiduría oriental × perspectivas multiculturales';
   copy.es.sys4='Modelos multiculturales';
-  copy.es.heroTitle='Descubre tus talentos.<br>Enfócate en tus fortalezas.<br>Aspira a la excelencia.';
+  copy.es.heroTitle='Descubre tus fortalezas.<br>Poténcialas.';
   copy.es.heroLead='Explora la identidad, el talento y la estrategia a través del I Ching, Wu Xing, El arte de la guerra, las tradiciones mayas y otras perspectivas culturales.';
 }
 
